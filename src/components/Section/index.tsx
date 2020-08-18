@@ -9,6 +9,8 @@ interface Props {
 }
 
 const Section: React.FC<Props> = ({variant, title, description}) => {
+    const buttomVariant = Math.round(Math.random());
+
     return (
         <Container className={variant}>
             <HeaderWrapper>
@@ -17,7 +19,7 @@ const Section: React.FC<Props> = ({variant, title, description}) => {
                       <DropboxLogo /> 
                       <span>Dropbox</span>
                     </h1>
-                    <button>Interagir</button>
+                    <button>{buttomVariant === 0 ? 'Acessar' : 'Interagir'}</button>
                 </Header>
             </HeaderWrapper>
 
